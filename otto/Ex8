@@ -1,0 +1,6 @@
+isDot n = n=='.'
+
+fileExt (x:xs)
+  | isDot x   = putStrLn xs
+  | otherwise = fileExt xs
+fileExt [] = putStrLn "No ext found!"
