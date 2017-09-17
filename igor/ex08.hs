@@ -1,8 +1,8 @@
 mesmos_elementos [] []     = True
 mesmos_elementos (x:xs) [] = False
 mesmos_elementos [] (y:ys) = False
-mesmos_elementos (x:xs) (y:ys) | (tamanho_lista (x:xs)) == (tamanho_lista (y:ys)) = (compara_listas (x:xs) (y:ys))
-                               | otherwise = False
+mesmos_elementos (x:xs) (y:ys) | (tamanho_lista (x:xs)) /= (tamanho_lista (y:ys)) = False
+                               | otherwise = compara_listas (x:xs) (y:ys)
 -------------------------------------------------------------------------------------
 tamanho_lista [] = 0
 tamanho_lista (x:xs) = 1 + tamanho_lista xs

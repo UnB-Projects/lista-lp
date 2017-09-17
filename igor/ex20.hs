@@ -1,0 +1,1 @@
+map3 func xs ys zs = (map func xs, map func ys, map func zs)
